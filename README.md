@@ -3,6 +3,14 @@
 Simple Flutter authentication playground showcasing a clean architecture-ish set up with MobX state
 management and Hive-powered local storage.
 
+
+## 📸 Screenshots
+
+<img width="400"  src="https://github.com/user-attachments/assets/ea397196-fa82-4a9b-98ae-e1b35ad2926c" />
+<img width="400"  src="https://github.com/user-attachments/assets/30d0689d-41dc-43bb-9ffa-623ab8c92578" />
+
+
+
 ## Highlights
 
 - **MobX + GetIt**: `AuthController` holds all business logic and is injected through the service
