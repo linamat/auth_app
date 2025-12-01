@@ -1,6 +1,6 @@
 import 'package:auth_app/core/di/service_locator.dart';
 import 'package:auth_app/presentation/auth/auth_screen.dart';
-import 'package:auth_app/presentation/auth/controllers/auth_controller.dart';
+import 'package:auth_app/presentation/auth/bloc/auth_bloc.dart';
 import 'package:auth_app/presentation/home/home_screen.dart';
 import 'package:auth_app/presentation/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -30,8 +30,8 @@ class AuthApp extends StatelessWidget {
   }
 
   String _getInitialRoute() {
-    final authController = getIt<AuthController>();
-    final isAuthenticated = authController.authenticatedUser != null;
+    final authBloc = getIt<AuthBloc>();
+    final isAuthenticated = authBloc.state.authenticatedUser != null;
 
     return isAuthenticated ? HomeScreen.routeName : AuthScreen.routeName;
   }
